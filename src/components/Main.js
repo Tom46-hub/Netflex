@@ -15,6 +15,13 @@ import serie12 from "../assets/serie12.png";
 import serie13 from "../assets/serie13.png";
 import serie14 from "../assets/serie14.png";
 import serie15 from "../assets/serie15.png";
+import fond2 from "../assets/fond2.png";
+import vid1 from "../assets/vid1.png";
+import vid2 from "../assets/vid2.png";
+import vid3 from "../assets/vid3.png";
+import vid4 from "../assets/vid4.png";
+
+
 
 function Body() {
   return (
@@ -22,9 +29,12 @@ function Body() {
       <div className="bg-container">
         <img className="fond-bg" src={Narcos} alt="Narcos" />
         <div className="text-overlay">
-          <h1>Netflix Originals: <br /> Narcos </h1>
-          <p>
-            Le cartel de Cali reprend le pouvoir en Colombie. Les successeurs d’Escobar
+          <h1 className="Netflix">Netflix Originals: <br /></h1>
+          <h1 className="Narcos">Narcos
+            
+          </h1>
+          <p className="pave2">
+            Le cartel de Cali reprend le pouvoir en Colombie. <br></br> Les successeurs d’Escobar
             passent à l’action et déclarent la guerre au gouvernement.
           </p>
           <div className="button">
@@ -58,7 +68,27 @@ function Body() {
         <img className="serie" src={serie14} alt="Serie 14" />
         <img className="serie" src={serie8} alt="Serie 8" />
       </div>
+
+      <div className="bg-container2">
+      <img className="fond-bg2" src={fond2} alt="Fondbg2" />
+      <div className="text-overlay2">
+        <h1 className="or">L'ÂGE D'OR DU CINÉMA</h1>
+        <h1 className="polonais">POLONAIS</h1>
+        <p className="pave">Andrzej Wajda, Roman Polański, Agnieszka Holland, Paweł Pawlikowski… <br></br>
+        Découvrez ceux qui ont fait connaitre le cinéma polonais sur la scène internationale.</p>
+      </div>
+      </div>
+
+      <div className="video">
+        <img className="vid1" src={vid1}/>
+        <img className="vid2" src={vid2}/>
+        <img className="vid3" src={vid3}/>
+        <img className="vid4" src={vid4}/>
+      </div>
+
     </div>
+
+    
   );
 }
 

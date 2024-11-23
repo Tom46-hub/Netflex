@@ -36,6 +36,7 @@ nav,
     align-items: center;
     gap: 16px;
     color: #f5f5f1;
+    
   }
 
   .header__right img:not(.avatar__dropdown) {
@@ -50,15 +51,5 @@ nav,
 
   .avatar__dropdown {
     height: 6px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-  
-  nav {
-    display: none;
   }
 }

@@ -12,12 +12,12 @@ function Navbar() {
       <div className="header__left">
         <img className="logo" src={logo} alt="Netflix" />
         <nav>
-          <a className="">Découverte</a>
-          <a className="">Séries TV</a>
-          <a className="">Films</a>
-          <a className="">Programmes originaux</a>
-          <a className="">Ajouts récents</a>
-          <a className="">Ma liste</a>
+          <a className="navi">Découverte</a>
+          <a className="navi">Séries TV</a>
+          <a className="navi">Films</a>
+          <a className="navi">Programmes originaux</a>
+          <a className="navi">Ajouts récents</a>
+          <a className="navi">Ma liste</a>
         </nav>
       </div>
       <a className="burger">

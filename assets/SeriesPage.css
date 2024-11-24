@@ -1,0 +1,81 @@
+/* --- Section Séries (Structure Générale) --- */
+#series-page {
+  background-color: #141414; /* Fond noir */
+  padding: 20px 0;
+  color: white; /* Texte en blanc */
+}
+
+.series-section {
+  margin-bottom: 40px; /* Espacement entre les sections */
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px; /* Espacement à gauche */
+  margin-bottom: 10px; /* Espacement sous le titre */
+  color: #fff;
+}
+
+/* --- Container pour les séries (flexbox avec défilement) --- */
+.serie-container {
+  display: flex; /* Grille horizontale avec flexbox */
+  gap: 5px; /* Espacement entre les images */
+  overflow-x: auto; /* Activer le défilement horizontal si nécessaire */
+  padding: 10px 20px;
+  position: relative;
+  width: 100%; /* Prendre toute la largeur disponible */
+}
+
+/* Masquer la barre de défilement */
+.serie-container::-webkit-scrollbar {
+  display: none; /* Supprimer les barres de défilement (Chrome, Edge, etc.) */
+}
+
+/* --- Styles pour chaque série (image) --- */
+.serie {
+  width: 204px; /* Largeur fixe */
+  height: 124px; /* Hauteur fixe */
+  object-fit: cover; /* Remplissage sans déformation */
+  border-radius: 5px; /* Coins arrondis */
+  transition: transform 0.3s ease-in-out;
+}
+
+.serie:hover {
+  transform: scale(1.05); /* Zoom au survol */
+}
+
+/* --- Responsive Design --- */
+@media screen and (max-width: 1024px) {
+  .serie-container {
+    width: 100%; /* Prendre toute la largeur */
+  }
+
+  .serie {
+    width: 204px; /* Largeur fixe inchangée */
+    height: 124px; /* Hauteur fixe inchangée */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .serie-container {
+    width: 100%; /* Prendre toute la largeur */
+  }
+
+  .serie {
+    width: 204px; /* Largeur fixe inchangée */
+    height: 124px; /* Hauteur fixe inchangée */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .serie-container {
+    width: 100%; /* Prendre toute la largeur */
+  }
+
+  .serie {
+    width: 204px; /* Largeur fixe inchangée */
+    height: 124px; /* Hauteur fixe inchangée */
+  }
+}

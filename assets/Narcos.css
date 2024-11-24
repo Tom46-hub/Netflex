@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  margin-top: 60px; /* Marge pour éviter que l'image touche la navbar */
+}
+
+.fond-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translate(0%, -50%);
+  color: white;
+  text-align: left;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.text-overlay h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+.text-overlay .Netflix {
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.button {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.button button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: #0000004c;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button button:hover {
+  background-color: #f40612;
+  transform: scale(1.1);
+}
+
+/* --- Mobile First --- */
+
+@media screen and (max-width: 425px) {
+  .text-overlay {
+    left: 10px; /* Légèrement plus proche du bord pour les petits écrans */
+    top: 30%; /* Ajuster la position verticale */
+    padding: 15px; /* Réduire le padding pour gagner de l'espace */
+    max-width: 90%; /* Utiliser presque toute la largeur de l'écran */
+  }
+
+  .text-overlay h1 {
+    font-size: 2rem; /* Taille plus petite pour s'adapter aux petits écrans */
+  }
+
+  .text-overlay p {
+    font-size: 0.85rem; /* Texte plus petit pour la lecture mobile */
+  }
+
+  .button {
+    width: 100%; /* Les boutons prennent toute la largeur de l'écran */
+    flex-direction: column; /* Afficher les boutons en colonne */
+    gap: 10px; /* Espacement réduit entre les boutons */
+  }
+
+  .button button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    padding: 12px 0; /* Ajuster la taille du padding pour les petits écrans */
+    font-size: 0.9rem; /* Taille du texte des boutons ajustée */
+  }
+}
+
+/* --- Tablette et Petits écrans --- */
+
+@media screen and (max-width: 768px) {
+  .text-overlay {
+    left: 10px; /* Toujours plus proche du bord sur les tablettes */
+    top: 35%; /* Un peu plus bas que sur mobile */
+    max-width: 80%; /* Réduire la largeur à 80% */
+  }
+
+  .text-overlay h1 {
+    font-size: 2.5rem; /* Ajuster la taille du titre pour les écrans intermédiaires */
+  }
+
+  .text-overlay p {
+    font-size: 0.9rem; /* Ajuster la taille du texte */
+  }
+
+  .button {
+    width: 100%;
+    flex-direction: row; /* Retourner à une disposition en ligne pour les écrans plus larges */
+    gap: 20px; /* Augmenter l'espacement entre les boutons */
+  }
+
+  .button button {
+    width: 48%; /* Les boutons prennent moins de place que sur mobile */
+    padding: 12px 0;
+    font-size: 1rem; /* Taille de texte normale */
+  }
+}
+
+/* --- Ordinateurs de Bureau (Grand écran) --- */
+
+@media screen and (min-width: 1025px) {
+  .text-overlay {
+    left: 5%; /* Espace à gauche pour l'écran plus large */
+    top: 40%; /* Positionnement du texte centré pour un écran large */
+    padding: 20px;
+    max-width: 600px; /* La largeur du texte reste fixe */
+  }
+
+  .text-overlay h1 {
+    font-size: 4rem; /* Plus grand titre sur grand écran */
+  }
+
+  .text-overlay p {
+    font-size: 1.2rem; /* Taille standard du texte */
+  }
+
+  .button {
+    width: 500px; /* Garde la largeur initiale des boutons */
+    justify-content: space-evenly; /* Espacement équitable entre les boutons */
+  }
+
+  .button button {
+    width: 200px; /* Largeur des boutons gardée à 200px */
+    font-size: 1rem; /* Taille standard des boutons */
+  }
+}
+
+/* --- Ordinateurs de Bureau très larges (écrans à partir de 1440px) --- */
+
+@media screen and (min-width: 1440px) {
+  .text-overlay h1 {
+    font-size: 4.5rem; /* Légèrement plus grand pour des écrans très larges */
+  }
+
+  .button {
+    width: 600px; /* Largeur des boutons un peu plus large */
+  }
+}

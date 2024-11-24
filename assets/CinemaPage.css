@@ -1,0 +1,68 @@
+.bg-container2 {
+  position: relative;
+  width: 100%;
+}
+
+.fond-bg2 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay2 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  transform: translate(0%, -50%);
+  color: white;
+  text-align: left;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.text-overlay2 h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.text-overlay2 .polonais {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.text-overlay2 p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Cinema */
+@media screen and (max-width: 1024px) {
+  .text-overlay2 h1 {
+    font-size: 3.5rem;
+  }
+
+  .text-overlay2 p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-overlay2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-overlay2 p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .text-overlay2 h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay2 p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,5 +1,5 @@
 footer {
-    background-color: #141414;
+    background-color: #000;
     padding: 20px;
   }
   
@@ -28,7 +28,7 @@ footer {
     max-width: 50px;
     height: 28px;
     display: flex;
-    gap: 11px;
+    gap: 16px;
     margin-bottom: 20px;
   }
   
@@ -46,13 +46,14 @@ footer {
   .footer-code {
     border: solid;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    width: 100px;
-    height: 18px;
+    width: 150px;
+    height: 12px;
+    
   }
   
   .footer-block p {
@@ -62,5 +63,6 @@ footer {
   .footer-blocks {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+  
 }  

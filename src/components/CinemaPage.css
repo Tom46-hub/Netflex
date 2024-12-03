@@ -1,0 +1,86 @@
+/* Style général de la page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Style de la section principale */
+section {
+  padding: 20px;
+}
+
+/* Titre de la section "My List" */
+.Tpos {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Le carrousel de films */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Empêche le défilement des images en dehors de la zone */
+}
+
+/* Conteneur des images dans le carrousel */
+.carousel-track {
+  display: flex;
+  gap: 10px; /* Espacement entre les images */
+  transition: transform 0.5s ease-in-out; /* Effet de transition lors du changement d'image */
+}
+
+/* Style pour chaque image du carrousel */
+.carousel-item {
+  width: 200px; /* Largeur des images */
+  height: 300px; /* Hauteur des images */
+  object-fit: cover; /* Assure que l'image remplit l'espace sans déformation */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Ombre portée pour les images */
+  transition: transform 0.3s ease; /* Animation au survol */
+}
+
+/* Effet de zoom au survol de chaque image */
+.carousel-item:hover {
+  transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+/* Media Queries pour rendre la page responsive */
+
+/* Mobile First */
+@media screen and (max-width: 425px) {
+  .Tpos {
+    font-size: 1.2rem;
+  }
+
+  .carousel-item {
+    width: 150px;
+    height: 225px;
+  }
+}
+
+/* Tablettes et petits écrans */
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    width: 180px;
+    height: 270px;
+  }
+
+  .Tpos {
+    font-size: 1.4rem;
+  }
+}
+
+/* Ordinateurs de bureau */
+@media screen and (min-width: 1025px) {
+  .carousel-item {
+    width: 250px;
+    height: 375px;
+  }
+
+  .Tpos {
+    font-size: 1.6rem;
+  }
+}

@@ -1,14 +1,19 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
+import React from 'react';
+import './components/Narcos.css'; // Le fichier CSS principal
+import Narcos from './components/Narcos';
+import SeriesPage from './components/SeriesPage';
+import CinemaPage from './components/CinemaPage';
+import List from './components/List';
+import Color from './components/Color';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Main/>
-      <Footer />
-
+    <div>
+      <Narcos />
+      <SeriesPage />
+      <CinemaPage />
+      <List/>
+      <Color/>
     </div>
   );
 }

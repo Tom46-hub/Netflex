@@ -1,0 +1,306 @@
+/* Style général pour le header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #141414;
+  height: 70px;
+  position: relative;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b3b3b3;
+}
+
+.burger {
+  position: absolute; /* Permet de contrôler précisément la position */
+  right: 20px; /* Décale de 10px vers la gauche depuis le bord droit */
+  top: 55%; /* Centré verticalement */
+  transform: translateY(-50%); /* Ajuste le centrage vertical */
+  padding: 10px; /* Zone cliquable augmentée */
+  z-index: 1000; /* Assure qu'il reste au-dessus des autres éléments */
+}
+
+.burger__icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Modification de la couleur de la croix en blanc lors de l'activation */
+.burger__icon[src*="burger.svg"] {
+  filter: none; /* La couleur par défaut */
+}
+
+.burger__icon[src*="close.svg"] {
+  filter: invert(1); /* Inverser la couleur pour la croix, la rendre blanche */
+}
+
+/* Header à droite */
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__right a {
+  color: #e5e5e5;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.header__right a img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Avatar et dropdown */
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 32px;
+  height: 32px;
+}
+
+.avatar__dropdown {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown__container {
+  position: relative;
+}
+
+.dropdown__menu {
+  position: absolute;
+  border: solid rgba(255, 255, 255, 0.3);
+  top: 50px;
+  right: 0;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  width: 200px;
+}
+
+.dropdown__menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown__menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown__menu a img {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown__menu a:hover {
+  background-color: #404040;
+}
+
+.dropdown__menu div {
+  border-top: 1px solid #333;
+}
+
+.deco {
+  text-align: center;
+}
+
+.deco a {
+  color: red;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  right: -100%; /* Par défaut, hors de l'écran */
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #141414;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0; /* Fait apparaître la sidebar */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar .deco {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+.sidebar .deco a {
+  font-weight: bold;
+  color: #e50914;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent noir */
+  z-index: 998; /* Sous la sidebar */
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  header {
+    padding: 0 10px;
+    height: 60px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-right: auto;
+  }
+
+  nav {
+    display: none; /* Masque le menu principal */
+  }
+
+  .burger {
+    display: block; /* Toujours visible */
+  }
+
+  .burger__icon {
+    width: 25px; /* Taille adaptée pour petits écrans */
+    height: 25px;
+  }
+
+  .header__right {
+    display: none; /* Masque les autres options à droite */
+  }
+
+  .avatar img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .avatar__dropdown {
+    width: 10px;
+    height: 10px;
+  }
+
+  .dropdown__menu {
+    width: 180px;
+  }
+
+  .sidebar {
+    width: 200px; /* Sidebar plus petite */
+    padding: 15px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+  }
+
+  .sidebar a img {
+    width: 16px;
+    margin-right: 8px;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Accentue l'opacité */
+  }
+}
+
+/* Très petits écrans (moins de 400px) */
+@media (max-width: 400px) {
+  header {
+    padding: 0 5px;
+    height: 55px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .burger__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dropdown__menu {
+    width: 160px;
+  }
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar a {
+    font-size: 12px;
+  }
+
+  .sidebar .deco a {
+    font-size: 13px;
+  }
+}

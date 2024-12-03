@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container des images */
+.large-container {
+    display: flex;
+    flex-direction: row;             /* Aligner les images sur la même ligne */
+    gap: 5px;                        /* Espace de 5px entre les images */
+    justify-content: flex-start;     /* Aligne les images à gauche */
+    margin-top: 100px;               /* Décalage de l'espace en haut, si nécessaire */
+}
+
+/* Style des images */
+.list-large {
+    width: 217px !important;         /* Largeur de l'image */
+    height: 434px !important;        /* Hauteur de l'image */
+    object-fit: cover !important;    /* Garde les proportions de l'image sans la déformer */
+}
+
+/* Restriction de la taille des images dans .large-container */
+.large-container > img {
+    height: 434px;                   /* Hauteur fixe des images */
+    width: -500px;                    /* Largeur fixe des images */
+}
